@@ -1,9 +1,10 @@
-version: '3.4'
+version: '3'
 
 services:
-  app:
+  web-ftp:
+    image: dddmmm/web-ftp:0.10
 #    image: cardonaje/monstaftp:latest
-    build: .
+#    build: .
     volumes:
       - "./license:/var/www/mftp/license"
       - "./settings:/var/www/mftp/settings"
@@ -27,3 +28,7 @@ services:
 #  webgateway:
 #    external: true
 
+#BUILD images
+#   docker build -t dddmmm/web-ftp:0.10 .
+#   docker images
+#   docker push dddmmm/web-ftp:0.10
